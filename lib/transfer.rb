@@ -30,7 +30,7 @@ class Transfer
   #reverse transfers that have already been executed
   def reverse_transfer
     if status == 'complete'
-      reciever.balance -= amount
+      receiver.balance -= amount
       sender.balance += amount
       @status = 'reversed'
     end
